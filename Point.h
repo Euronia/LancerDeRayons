@@ -9,7 +9,8 @@ class Point {
 public :
     Point();
     Point(float varX, float varY, float varZ);
-    void translate (float k, Vector &vecD);
+    Point& operator- (const Point& point);
+    void translate (const Vector& vecD);
     float x ;
     float y ;
     float z ;

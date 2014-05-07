@@ -18,9 +18,16 @@
     {
     }
 
-    void Point::translate (float k, Vector &vecD)
+    Point& Point::operator- (const Point& point)
     {
-        vecD = vecD * k ;
+        this->x -= point.x ;
+        this->y -= point.y ;
+        this->z -= point.z ;
+        return *this;
+    }
+
+    void Point::translate (const Vector& vecD)
+    {
         this->x += vecD.getX();
         this->y += vecD.getY();
         this->z += vecD.getZ();
