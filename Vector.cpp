@@ -17,7 +17,7 @@
     {
     }
 
-    Vector::Vector(Point &A)    // Point A is supposed to be the result
+    Vector::Vector(const Point &A)    // Point A is supposed to be the result
     :                           // Of two points subtraction
         x(A.x),
         y(A.y),
