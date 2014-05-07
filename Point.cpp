@@ -21,7 +21,7 @@
     void Point::translate (float k, Vector &vecD)
     {
         vecD = vecD * k ;
-        this->x *= vecD.getX();
-        this->y *= vecD.getY();
-        this->z *= vecD.getZ();
+        this->x += vecD.getX();
+        this->y += vecD.getY();
+        this->z += vecD.getZ();
     }
