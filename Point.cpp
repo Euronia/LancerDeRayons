@@ -18,13 +18,18 @@
     {
     }
 
-    Point& Point::operator- (const Point& point)
+    Point& Point::operator-= (const Point& point)
     {
         this->x -= point.x ;
         this->y -= point.y ;
         this->z -= point.z ;
         return *this;
     }
+
+      Point Point::operator- (const Point& pointA)
+     {
+         return Point( this->x - pointA.x , this->y -pointA.y, this->z -pointA.z) ;
+     }
 
     void Point::translate (const Vector& vecD)
     {
