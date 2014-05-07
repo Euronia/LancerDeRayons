@@ -8,7 +8,7 @@ class Vector
 public :
     Vector() ;
     Vector(float varX, float varY, float varZ);
-    Vector(Point& A,Point& B);
+    Vector(Point& A);
     float getX() const;
     float getY() const;
     float getZ() const;

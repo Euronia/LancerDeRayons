@@ -17,11 +17,11 @@
     {
     }
 
-    Vector::Vector(Point &A,Point &B)
-    :
-        x(B.x-A.x),
-        y(B.y-A.y),
-        z(B.z-A.z)
+    Vector::Vector(Point &A)    // Point A is supposed to be the result
+    :                           // Of two points subtraction
+        x(A.x),
+        y(A.y),
+        z(A.z)
     {
     }
 
