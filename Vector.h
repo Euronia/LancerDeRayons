@@ -18,8 +18,8 @@ public :
     void setZ(float varZ) ;
     */
     Vector& operator*(float k);
-    Vector crossProduct(Vector vecA , Vector vecB); // Produit vectoriel
-    float dotProduct(Vector vecA , Vector vecB); // Produit scalaire
+    Vector crossProduct(Vector& vecA , Vector& vecB); // Produit vectoriel
+    float dotProduct(Vector& vecA , Vector& vecB); // Produit scalaire
 
 protected :
 
