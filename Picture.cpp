@@ -14,4 +14,3 @@ Picture::~Picture()
 {
     delete[] pictureTab;
 }
-
