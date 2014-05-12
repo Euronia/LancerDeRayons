@@ -7,7 +7,7 @@ class MattTexture : public Texture
 {
 public :
     MattTexture();
-    MattTexture(Color c);
+    MattTexture(const Color& c);
 
 protected :
 

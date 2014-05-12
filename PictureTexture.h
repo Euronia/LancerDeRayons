@@ -6,7 +6,7 @@
 class PictureTexture : public Texture
 {
 public:
-    PictureTexture(Picture fond, Color c);
+    PictureTexture(const Picture& fond, const Color &c);
 
 protected:
 

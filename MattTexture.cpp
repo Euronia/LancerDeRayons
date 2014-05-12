@@ -7,7 +7,7 @@ MattTexture::MattTexture()
     c = Color(0,0,0);
 }
 
-MattTexture::MattTexture(Color color)
+MattTexture::MattTexture(const Color& color)
 {
     c = color;
 }

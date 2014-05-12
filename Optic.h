@@ -7,7 +7,7 @@ class Optic
 
 public :
     Optic();
-    Optic(Texture t, int bright);
+    Optic(const Texture& t, int bright);
 
 protected :
 

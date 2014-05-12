@@ -7,11 +7,11 @@ class Geometry
 
 public :
     Geometry();
-    Geometry(Optic o);
+    Geometry(const Optic& o);
 
 protected :
 
-public :
+private :
     Optic o;
 
 };

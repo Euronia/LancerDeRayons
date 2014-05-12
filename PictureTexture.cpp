@@ -3,12 +3,10 @@
 #include "Color.h"
 #include "Picture.h"
 
-PictureTexture::PictureTexture(Picture pict, Color color)
+PictureTexture::PictureTexture(const Picture& pict, const Color& color)
 :
     c(color),
     fond(pict)
 {
 
 }
-
-

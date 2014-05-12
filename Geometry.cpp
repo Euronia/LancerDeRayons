@@ -9,7 +9,7 @@ Geometry::Geometry()
 
 }
 
-Geometry::Geometry(Optic optic)
+Geometry::Geometry(const Optic& optic)
 :
     o(optic)
 {
