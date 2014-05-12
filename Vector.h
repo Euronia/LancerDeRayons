@@ -12,7 +12,14 @@ public :
     float getX() const;
     float getY() const;
     float getZ() const;
+    /*
+    void setX(float varX) ;
+    void setY(float varY) ;
+    void setZ(float varZ) ;
+    */
     Vector& operator*(float k);
+    Vector crossProduct(Vector vecA , Vector vecB); // Produit vectoriel
+    float dotProduct(Vector vecA , Vector vecB); // Produit scalaire
 
 protected :
 
