@@ -15,3 +15,8 @@ Geometry::Geometry(const Optic& optic)
 {
 
 }
+
+Color Geometry::getColor (float posX,float posY)
+{
+    return o.getColor(posX,posY);
+}

@@ -8,6 +8,7 @@ class Optic
 public :
     Optic();
     Optic(const Texture& t, int bright);
+    Color getColor (float posX,float posY);
 
 protected :
 

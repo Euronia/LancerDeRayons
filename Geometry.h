@@ -8,11 +8,12 @@ class Geometry
 public :
     Geometry();
     Geometry(const Optic& o);
+    Color getColor (float posX,float posY);
 
 protected :
+    Optic o;
 
 private :
-    Optic o;
 
 };
 
