@@ -39,24 +39,23 @@ Color::Color(float r, float g, float b)
     }
 }
 
-Color Color::addColors(const Color& c1, const Color& c2)
+Color Color::operator+(const Color& c)
 {
-    Color colorResult;
-
-    colorResult.r = c1.r + c2.r;
-    colorResult.g = c1.g + c2.g;
-    colorResult.b = c1.b + c2.b;
-
-    return colorResult;
+    this->r = this->r + c.r;
+    this->g = this->g + c.g;
+    this->b = this->b + c.b;
 }
 
-Color Color::multiplyColors(const Color& c1, const Color& c2)
+Color Color::operator*(const Color& c)
 {
-    Color colorResult;
+    this->r = this->r * c.r;
+    this->g = this->g * c.g;
+    this->b = this->b * c.b;
+}
 
-    colorResult.r = c1.r * c2.r;
-    colorResult.g = c1.g * c2.g;
-    colorResult.b = c1.b * c2.b;
-
-    return colorResult;
+Color Color::operator*(float scalar)
+{
+    this->r = this->r * scalar;
+    this->g = this->g * scalar;
+    this->b = this->b * scalar;
 }
