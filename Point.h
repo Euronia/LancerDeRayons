@@ -1,6 +1,13 @@
 #ifndef POINT_H
 #define POINT_H
 
+    /*
+*   This class represent a Point in a 3D environment.
+*   It's represented by 3 floats which defined his location
+*
+    */
+
+
 
 class Vector;//Forward declaration
 

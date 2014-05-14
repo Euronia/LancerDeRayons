@@ -9,7 +9,7 @@ Scene::Scene ()
 }
 
 
-Scene::Scene(std::vector<Geometry> tab)
+Scene::Scene(const std::vector<Geometry>& tab)
 :
     objectsTab(tab)
 {

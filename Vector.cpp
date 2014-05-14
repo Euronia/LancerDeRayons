@@ -63,7 +63,7 @@
         return *this;
     }
 
-    Vector Vector::crossProduct(Vector& vecA , Vector& vecB)
+    Vector Vector::crossProduct(const Vector& vecA , const Vector& vecB)
     {
         float varX , varY, varZ ;
         varX = vecA.getY()*vecB.getZ() - vecA.getZ()*vecB.getY() ;
@@ -72,7 +72,7 @@
         return Vector(varX,varY,varZ);
     }
 
-    float Vector::dotProduct(Vector& vecA , Vector& vecB)
+    float Vector::dotProduct(const Vector& vecA , const Vector& vecB)
     {
         return float(vecA.getX()*vecB.getX() + vecA.getY()*vecB.getY() + vecA.getZ()*vecB.getZ());
     }

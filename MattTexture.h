@@ -8,6 +8,7 @@ class MattTexture : public Texture
 public :
     MattTexture();
     MattTexture(const Color& c);
+    Color getColor (float posX,float posY);
 
 protected :
 

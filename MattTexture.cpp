@@ -3,11 +3,18 @@
 #include "Color.h"
 
 MattTexture::MattTexture()
+:
+     c (Color(0,0,0))
 {
-    c = Color(0,0,0);
 }
 
 MattTexture::MattTexture(const Color& color)
+:
+    c(color)
 {
-    c = color;
+}
+
+Color MattTexture::getColor (float posX,float posY)
+{
+    return this->c ;
 }

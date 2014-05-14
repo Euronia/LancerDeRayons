@@ -13,7 +13,7 @@ class Scene
 {
 public :
     Scene();
-    Scene(std::vector<Geometry> tab);
+    Scene(const std::vector<Geometry>& tab);
 
 protected :
 

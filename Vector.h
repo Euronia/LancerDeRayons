@@ -2,6 +2,13 @@
 #define VECTOR_H
 #include "Point.h"
 
+    /*
+* This class represents a Vector
+* It his defined by 3 floats representing his "movement" in the 3D universe
+*
+    */
+
+
 class Vector
 {
 
@@ -18,8 +25,10 @@ public :
     void setZ(float varZ) ;
     */
     Vector& operator*(float k);
-    Vector crossProduct(Vector& vecA , Vector& vecB); // Produit vectoriel
-    float dotProduct(Vector& vecA , Vector& vecB); // Produit scalaire
+    Vector crossProduct(const Vector& vecA ,const Vector& vecB); // Produit vectoriel
+    float dotProduct(const Vector& vecA ,const Vector& vecB); // Produit scalaire
+
+    friend Vector operator + (const Vector &lhs, const Vector &rhs);
 
 protected :
 

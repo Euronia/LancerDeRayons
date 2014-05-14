@@ -26,9 +26,9 @@
         {
         }
 
-    bool Sphere::pointBelongsTo (Point point)
+    bool Sphere::pointBelongsTo (const Point& point)
     {
-      return std::pow((point.x-this->sphereOrigin.x),2)+std::pow((point.y-this->sphereOrigin.y),2)
-      + std::pow((point.z-this->sphereOrigin.z),2) == std::pow(this->diameter,2) ;
+      return std::pow((point.x-sphereOrigin.x),2)+std::pow((point.y-sphereOrigin.y),2)
+      + std::pow((point.z-sphereOrigin.z),2) == std::pow(diameter,2) ;
 
     }

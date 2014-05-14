@@ -8,7 +8,9 @@ class Geometry
 public :
     Geometry();
     Geometry(const Optic& o);
-    Color getColor (float posX,float posY);
+    Color getColor (float posX,float posY) const;
+    virtual bool intersect(const Rayon &rayon, float dist) const = 0;
+    virtual bool intersect(const Rayon &rayon, Hit &hit, float dist) const = 0;
 
 protected :
     Optic o;

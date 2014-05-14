@@ -13,7 +13,7 @@ public :
     Sphere();
     Sphere(const Optic& o) ;
     Sphere(const Optic& o, const Point& origin, float diamet);
-    bool pointBelongsTo (Point point);
+    bool pointBelongsTo (const Point& point);
 
 protected :
 
