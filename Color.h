@@ -6,6 +6,8 @@ class Color
 public :
     Color();
     Color(float x, float y, float z);
+    Color addColors(const Color& c1, const Color& c2);
+    Color multiplyColors(const Color& c1, const Color& c2);
 
 protected :
 
