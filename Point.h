@@ -17,7 +17,7 @@ public :
     Point();
     Point(float varX, float varY, float varZ);
     Point& operator-= (const Point& point);
-    Point operator- (const Point& pointA);
+    Point operator- (const Point& pointA) const;
     void translate (const Vector& vecD);
     float x ;
     float y ;
