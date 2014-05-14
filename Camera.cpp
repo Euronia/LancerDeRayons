@@ -3,22 +3,38 @@
 #include "Point.h"
 #include "Vector.h"
 
-Camera::Camera()
+Camera::Camera(const Point& point, const Point& targettedPoint, float angA, float angB, const Vector& vertical)
 :
-    origin(),
-    direct(),
-    angleA(0),
-    angleB(0)
+    origin(point),
+    direct(targettedPoint - point),
+    angleA(angA),
+    angleB(angB),
+    vertical(vertical)
 {
 }
 
-
-Camera::Camera(const Point& point, const Vector& vec, int angA, int angB)
+Camera::Camera(const Point& point, const Vector& direction, float angA, float angB, const Vector& vertical)
 :
     origin(point),
-    direct(vec),
+    direct(direction),
     angleA(angA),
-    angleB(angB)
+    angleB(angB),
+    vertical(vertical)
+{
+    // normaliser direction
+    // normaliser vertical
+    // calculer horizontale
+}
+
+
+Camera::Camera(const Point& point, const Vector& direction, float angA, float angB,const Vector& vertical,const Vector& horizon)
+:
+    origin(point),
+    direct(direction),
+    angleA(angA),
+    angleB(angB),
+    vertical(vertical),
+    horizontal(horizon)
 {
     // normaliser direction
     // normaliser vertical

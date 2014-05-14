@@ -3,13 +3,15 @@
 #include <iostream>
 #include "Point.h"
 #include "Vector.h"
+#include "Rayon.h"
 
 
 class Camera
 {
 public:
-    Camera(const Point& point, const Vector& vec, int angA, int angB);
-
+    Camera(const Point& point, const Point& targettedPoint, float angA, float angB, const Vector& vertical);
+    Camera(const Point& point, const Vector& direction, float angA, float angB, const Vector& vertical);
+    Camera(const Point& point, const Vector& direction, float angA, float angB,const Vector& vertical,const Vector& horizon);
     virtual Rayon getRayon(float u, float v) = 0;
 
 protected:
@@ -17,7 +19,9 @@ protected:
 private:
     Point origin;
     Vector direct;
-    int angleA , angleB ;
+    float angleA , angleB ;
+    Vector vertical;
+    Vector horizontal;
 
     // no code
     Camera();
