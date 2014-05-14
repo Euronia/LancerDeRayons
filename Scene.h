@@ -2,6 +2,7 @@
 #define SCENE_H
 #include <iostream>
 #include <vector>
+#include <memory>
 #include "Geometry.h"
 /*
 * This class represents the 3D scene
@@ -13,12 +14,12 @@ class Scene
 {
 public :
     Scene();
-    Scene(const std::vector<Geometry>& tab);
+    Scene(const std::vector<std::shared_ptr<Geometry>>& tab);
 
 protected :
 
 private :
-    std::vector<Geometry> objectsTab ;
+    std::vector<std::shared_ptr<Geometry>> objectsTab ;
 };
 
 

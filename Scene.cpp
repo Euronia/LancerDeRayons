@@ -9,7 +9,7 @@ Scene::Scene ()
 }
 
 
-Scene::Scene(const std::vector<Geometry>& tab)
+Scene::Scene(const std::vector<std::shared_ptr<Geometry>>& tab)
 :
     objectsTab(tab)
 {

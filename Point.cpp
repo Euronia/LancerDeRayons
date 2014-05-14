@@ -26,7 +26,7 @@
         return *this;
     }
 
-      Point Point::operator- (const Point& pointA)
+      Point Point::operator- (const Point& pointA) const
      {
          return Point( this->x - pointA.x , this->y -pointA.y, this->z -pointA.z) ;
      }
