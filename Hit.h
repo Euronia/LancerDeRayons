@@ -7,7 +7,7 @@ class Hit
 {
 
 public:
-    Hit(Point impactPoint, Vector normal, float u, float v);
+    Hit(const Point& impactPoint, const Vector& normal, float u, float v);
 
 protected:
 

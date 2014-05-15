@@ -30,6 +30,10 @@ public :
 
     friend Vector operator + (const Vector &lhs, const Vector &rhs);
 
+    float getNorm(); //Calcul de la norme d'un vecteur
+    void normalize();
+    Vector operator+(const Vector& vec);
+
 protected :
 
 private :

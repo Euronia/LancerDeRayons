@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Vector.h"
+#include <math.h>
 
  Vector::Vector()
     :
@@ -75,4 +76,26 @@
     float Vector::dotProduct(const Vector& vecA , const Vector& vecB)
     {
         return float(vecA.getX()*vecB.getX() + vecA.getY()*vecB.getY() + vecA.getZ()*vecB.getZ());
+    }
+
+    float Vector::getNorm()
+    {
+        return(sqrt(this->x*this->x + this->y*this->y + this->z*this->z));
+    }
+
+    void Vector::normalize()
+    {
+        float norm(this->getNorm());
+        this->x/=norm;
+        this->y/=norm;
+        this->z/=norm;
+    }
+
+    Vector Vector::operator+(const Vector& vec)
+    {
+        Vector result;
+        result.x = this->x + vec.x;
+        result.y = this->y + vec.y;
+        result.z = this->z + vec.z;
+        return(result);
     }
