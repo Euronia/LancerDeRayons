@@ -3,7 +3,7 @@
 #include "Point.h"
 #include "Vector.h"
 
-Hit::Hit(Point impactPoint, Vector normal, Vector u, Vector v)
+Hit::Hit(Point impactPoint, Vector normal, float u, float v)
 :
     impactPoint(impactPoint),
     normal(normal),

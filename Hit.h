@@ -7,15 +7,15 @@ class Hit
 {
 
 public:
-    Hit(Point impactPoint, Vector normal, Vector u, Vector v);
+    Hit(Point impactPoint, Vector normal, float u, float v);
 
 protected:
 
 private:
     Point impactPoint;
     Vector normal;
-    Vector u;
-    Vector v;
+    float u;
+    float v;
 };
 
 #endif
