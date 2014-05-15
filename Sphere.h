@@ -11,15 +11,14 @@ class Sphere : public Geometry
 {
 public :
     Sphere();
-    Sphere(const Optic& o) ;
-    Sphere(const Optic& o, const Point& origin, float diamet);
+    Sphere(const Point& origin, float radius);
     bool pointBelongsTo (const Point& point);
 
 protected :
 
 private :
     Point sphereOrigin ;
-    float diameter ;
+    float radius ;
 };
 
 
