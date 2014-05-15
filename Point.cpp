@@ -10,6 +10,10 @@
     {
     }
 
+    Point::~Point()
+    {
+    }
+
     Point::Point(float varX, float varY, float varZ)
     :
         x(varX),

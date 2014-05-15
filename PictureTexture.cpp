@@ -10,3 +10,7 @@ PictureTexture::PictureTexture(const Picture& pict, const Color& color)
 {
 
 }
+
+PictureTexture::~PictureTexture()
+{
+}

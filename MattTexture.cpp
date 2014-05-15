@@ -8,6 +8,10 @@ MattTexture::MattTexture()
 {
 }
 
+MattTexture::~MattTexture()
+{
+}
+
 MattTexture::MattTexture(const Color& color)
 :
     c(color)
