@@ -19,3 +19,13 @@ Point Rayon::getDistantPoint(float k)
     return(distantPoint);
 }
 
+Point Rayon::getOrigin()
+{
+    return(originPoint);
+}
+
+Vector Rayon::getDirection()
+{
+    return(directionalVector);
+}
+

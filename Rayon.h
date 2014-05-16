@@ -18,10 +18,12 @@ public :
 protected :
 
 private :
-    Point getDistantPoint(float k);
     Point originPoint ;
     Vector directionalVector ;
     Color colorCarried;
+    Point getDistantPoint(float k);
+    Point getOrigin();
+    Vector getDirection();
 
 };
 
