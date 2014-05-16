@@ -11,8 +11,11 @@ class Sphere : public Geometry
 {
 public :
     Sphere();
+    ~Sphere();
     Sphere(const Point& origin, float radius);
-    bool pointBelongsTo (const Point& point);
+    bool intersect(const Rayon &rayon, float dist) const ;
+    bool intersect(const Rayon &rayon, Hit &hit, float dist) const ;
+
 
 protected :
 
