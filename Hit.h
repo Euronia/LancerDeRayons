@@ -8,6 +8,11 @@ class Hit
 
 public:
     Hit(const Point& impactPoint, const Vector& normal, float u, float v);
+    Point getImpactPoint() const;
+    void setImpactPoint(const Point& impact);
+    void setNormal(const Vector& normal);
+    void setU(float u);
+    void setV(float v);
 
 protected:
 
