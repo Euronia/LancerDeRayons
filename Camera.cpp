@@ -40,3 +40,7 @@ Camera::Camera(const Point& point, const Vector& direction, float angA, float an
     // normaliser vertical
     // calculer horizontale
 }
+
+Camera::~Camera()
+{
+}
