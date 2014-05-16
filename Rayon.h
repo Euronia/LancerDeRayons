@@ -14,16 +14,16 @@ class Rayon {
 
 public :
     Rayon(const Point& origin, const Vector& direction, const Color& colorCarried);
-
+    Point getDistantPoint(float k) const;
+    Point getOrigin() const;
+    Vector getDirect() const;
 protected :
 
 private :
     Point originPoint ;
     Vector directionalVector ;
     Color colorCarried;
-    Point getDistantPoint(float k);
-    Point getOrigin();
-    Vector getDirection();
+
 
 };
 

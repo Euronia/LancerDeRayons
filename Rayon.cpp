@@ -10,7 +10,7 @@
     {
     }
 
-Point Rayon::getDistantPoint(float k)
+Point Rayon::getDistantPoint(float k) const
 {
     Point distantPoint;
     distantPoint.x = this->originPoint.x + k*this->directionalVector.getX();
@@ -19,12 +19,12 @@ Point Rayon::getDistantPoint(float k)
     return(distantPoint);
 }
 
-Point Rayon::getOrigin()
+Point Rayon::getOrigin() const
 {
     return(originPoint);
 }
 
-Vector Rayon::getDirection()
+Vector Rayon::getDirect() const
 {
     return(directionalVector);
 }
