@@ -2,8 +2,7 @@
 #define GEOMETRY_H
 #include "Optic.h"
 #include "Rayon.h"
-
-class Hit ; // A FAIRE
+#include "Hit.h""
 
 class Geometry
 {
