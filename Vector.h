@@ -24,10 +24,11 @@ public :
     void setY(float varY) ;
     void setZ(float varZ) ;
     */
-    Vector& operator*(float k);
-    Vector crossProduct(const Vector& vecA ,const Vector& vecB); // Produit vectoriel
-    float dotProduct(const Vector& vecA ,const Vector& vecB); // Produit scalaire
 
+    Vector& operator*(float k);
+
+    friend Vector crossProduct(const Vector& vecA ,const Vector& vecB); // Produit vectorie
+    friend float dotProduct(const Vector& vecA ,const Vector& vecB); // Produit scalaire
     friend Vector operator + (const Vector &lhs, const Vector &rhs);
 
     float getNorm(); //Calcul de la norme d'un vecteur
@@ -41,5 +42,7 @@ private :
     float y ;
     float z ;
 };
+
+
 
 #endif
