@@ -12,8 +12,7 @@
 class Rayon {
 
 public :
-    Rayon();
-    Rayon(const Vector& direction, const Point& origin);
+    Rayon(const Point& origin, const Vector& direction);
 
 protected :
 

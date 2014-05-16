@@ -1,16 +1,11 @@
 #include <iostream>
 #include "Rayon.h"
 
- Rayon::Rayon()
- :
-     directionalVector(),
-     originPoint()
-     {
-     }
 
- Rayon::Rayon(const Vector& vec, const Point& point)
+ Rayon::Rayon(const Point& origin, const Vector& direction)
  :
-     directionalVector(vec) ,
-     originPoint(point)
+     originPoint(origin) ,
+     directionalVector(direction)
+
     {
     }
