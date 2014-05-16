@@ -2,6 +2,7 @@
 #define RAYON_H
 #include "Point.h"
 #include "Vector.h"
+#include "Color.h"
 
     /*
 * This class represents a ray
@@ -12,13 +13,15 @@
 class Rayon {
 
 public :
-    Rayon(const Point& origin, const Vector& direction);
+    Rayon(const Point& origin, const Vector& direction, const Color& colorCarried);
 
 protected :
 
 private :
+    Point getDistantPoint(float k);
     Point originPoint ;
     Vector directionalVector ;
+    Color colorCarried;
 
 };
 
