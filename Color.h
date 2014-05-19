@@ -9,12 +9,13 @@ public :
     Color operator+ (const Color& c1);
     Color operator* (const Color& c);
     Color operator* (float scalary);
+    float r;
+    float g;
+    float b;
 
 protected :
 
 private :
-    float r;
-    float g;
-    float b;
+
 } ;
 #endif

@@ -7,6 +7,8 @@ class Picture
 public :
     Picture(int width, int height);
     ~Picture();
+    void GenerateFile();
+    Color * getPictureTab();
 
 protected :
 
