@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "Point.h"
 #include "Sphere.h"
-#include "Util.h"
 
    Sphere::Sphere(const Point& origin,float radius)
     :
@@ -15,7 +13,7 @@
     {
     }
 
-    bool Sphere::intersect(const Rayon &rayon, float dist) const
+    bool Sphere::intersect(const Rayon &rayon, float& dist) const
     {
         Vector OC(sphereOrigin-rayon.getOrigin());
         float k(dotProduct(OC,rayon.getDirect()));
@@ -30,7 +28,7 @@
         }
     }
 
-     bool Sphere::intersect(const Rayon &rayon, Hit &hit, float dist) const
+     bool Sphere::intersect(const Rayon &rayon, Hit &hit, float& dist) const
      {
         Vector OC(sphereOrigin-rayon.getOrigin());
         float k(dotProduct(OC,rayon.getDirect()));
@@ -40,6 +38,11 @@
         {
             float teta = sqrt(radiusSquare-h);
             hit.setImpactPoint(rayon.getDistantPoint(k-teta));
+            dist = k-teta ;
+            if (dist <0)
+            {
+                return false ;
+            }
             hit.setNormal(Vector(hit.getImpactPoint()-sphereOrigin));
             hit.setU(0.0);
             hit.setV(0.0);

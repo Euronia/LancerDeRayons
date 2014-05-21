@@ -3,6 +3,16 @@
 #include "Point.h"
 #include "Vector.h"
 
+Hit::Hit()
+:
+    impactPoint(),
+    normal(),
+    u(-1),
+    v(-1)
+{
+
+}
+
 Hit::Hit(const Point& impactPoint, const Vector& normal, float u, float v)
 :
     impactPoint(impactPoint),

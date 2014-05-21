@@ -56,12 +56,9 @@
         this->z = varZ ;
     }
     */
-    Vector& Vector::operator*(float k)
+    Vector Vector::operator*(float k) const
     {
-        this->x = x*k ;
-        this->y = y*k ;
-        this->z = z*k ;
-        return *this;
+        return Vector(x*k,y*k,z*k);
     }
 
     Vector crossProduct(const Vector& vecA , const Vector& vecB)

@@ -19,7 +19,7 @@ Picture::~Picture()
     delete[] pictureTab;
 }
 
-void Picture::GenerateFile()
+void Picture::GenerateFile() const
 {
     ofstream myStream("picture.ppm");
     if(!myStream)
@@ -28,6 +28,7 @@ void Picture::GenerateFile()
     }
     else
     {
+         cout << "Generation" << endl;
         myStream << "P3" << endl;
         myStream << this->width << " " << this->height << endl;
         myStream << 255 << endl;
@@ -35,15 +36,25 @@ void Picture::GenerateFile()
         {
             for(int j=0; j<this->width; j++)
             {
-                myStream << round(this->pictureTab[i*this->height+j].r*255) << " " << round(this->pictureTab[i*this->height+j].g*255)<< " " << round(this->pictureTab[i*this->height+j].b*255) << " ";
+                myStream << round(this->pictureTab[i*this->width+j].r*255) << " " << round(this->pictureTab[i*this->width+j].g*255)<< " " << round(this->pictureTab[i*this->width+j].b*255) << " ";
             }
             myStream << endl;
         }
+        cout << "Fini" << endl;
+    }
+}
+    int Picture::getWidth() const
+    {
+        return width ;
     }
 
-}
+    int Picture::getHeight() const
+    {
+        return height ;
+    }
 
-Color * Picture::getPictureTab()
+
+Color * Picture::getPictureTab() const
 {
     return(this->pictureTab);
 }

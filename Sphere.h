@@ -13,8 +13,8 @@ public :
     Sphere();
     ~Sphere();
     Sphere(const Point& origin, float radius);
-    bool intersect(const Rayon &rayon, float dist) const ;
-    bool intersect(const Rayon &rayon, Hit &hit, float dist) const ;
+    bool intersect(const Rayon &rayon, float& dist) const ;
+    bool intersect(const Rayon &rayon, Hit &hit, float& dist) const ;
 
 
 protected :

@@ -7,6 +7,7 @@ class Hit
 {
 
 public:
+    Hit();
     Hit(const Point& impactPoint, const Vector& normal, float u, float v);
     Point getImpactPoint() const;
     void setImpactPoint(const Point& impact);

@@ -25,9 +25,9 @@ public :
     void setZ(float varZ) ;
     */
 
-    Vector& operator*(float k);
+    Vector operator*(float k) const;
 
-    friend Vector crossProduct(const Vector& vecA ,const Vector& vecB); // Produit vectorie
+    friend Vector crossProduct(const Vector& vecA ,const Vector& vecB); // Produit vectoriel
     friend float dotProduct(const Vector& vecA ,const Vector& vecB); // Produit scalaire
     friend Vector operator + (const Vector &lhs, const Vector &rhs);
 

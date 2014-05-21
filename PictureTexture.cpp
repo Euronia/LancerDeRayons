@@ -5,10 +5,9 @@
 
 PictureTexture::PictureTexture(const Picture& pict, const Color& color)
 :
-    c(color),
-    fond(pict)
+    fond(pict),
+     c(color)
 {
-
 }
 
 PictureTexture::~PictureTexture()

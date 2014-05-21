@@ -7,8 +7,11 @@ class Picture
 public :
     Picture(int width, int height);
     ~Picture();
-    void GenerateFile();
-    Color * getPictureTab();
+    void GenerateFile() const;
+    Color * getPictureTab() const;
+    int getWidth() const ;
+    int getHeight() const ;
+
 
 protected :
 

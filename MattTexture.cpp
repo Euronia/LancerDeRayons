@@ -18,7 +18,7 @@ MattTexture::MattTexture(const Color& color)
 {
 }
 
-Color MattTexture::getColor (float posX,float posY)
+Color MattTexture::getColor (float posX,float posY) const
 {
     return this->c ;
 }

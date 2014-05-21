@@ -21,9 +21,9 @@ Camera::Camera(const Point& point, const Vector& direction, float angA, float an
     angleB(angB),
     vertical(vertical)
 {
-    // normaliser direction
-    // normaliser vertical
-    // calculer horizontale
+   direct.normalize();
+   this->vertical.normalize();
+   horizontal = crossProduct(direct,vertical);
 }
 
 
@@ -31,14 +31,14 @@ Camera::Camera(const Point& point, const Vector& direction, float angA, float an
 :
     origin(point),
     direct(direction),
-    angleA(angA),
-    angleB(angB),
+    angleA(angA/360*2*3.14159),
+    angleB(angB/360*2*3.14159),
     vertical(vertical),
     horizontal(horizon)
 {
-    // normaliser direction
-    // normaliser vertical
-    // calculer horizontale
+   direct.normalize();
+   this->vertical.normalize();
+   this->horizontal.normalize();
 }
 
 Camera::~Camera()
