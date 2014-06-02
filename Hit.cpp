@@ -28,6 +28,26 @@ Hit::Hit(const Point& impactPoint, const Vector& normal, float u, float v)
         return impactPoint;
     }
 
+    float Hit::getU() const
+    {
+        return u;
+    }
+
+    float Hit::getV() const
+    {
+        return v;
+    }
+
+    Vector Hit::getNormal() const
+    {
+        return normal;
+    }
+
+    std::shared_ptr<Scene_Entity> Hit::getObject() const
+    {
+        return objectHitted ;
+    }
+
     void Hit::setImpactPoint(const Point& impact)
     {
         impactPoint = impact ;
@@ -40,10 +60,16 @@ Hit::Hit(const Point& impactPoint, const Vector& normal, float u, float v)
 
     void Hit::setU(float u)
     {
-        u = u ;
+        this->u = u ;
     }
 
     void Hit::setV(float v)
     {
-        v = v ;
+        this->v = v ;
+    }
+
+    void Hit::setObject(const Scene_Entity& object)
+    {
+        std::shared_ptr<Scene_Entity> obj(std::make_shared<Scene_Entity>(object));
+        objectHitted = obj ;
     }

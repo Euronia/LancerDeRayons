@@ -9,7 +9,7 @@ public :
     MattTexture();
     ~MattTexture();
     MattTexture(const Color& c);
-    Color getColor (float posX,float posY) const;
+    Color getColor (float u,float v) const;
 
 protected :
 

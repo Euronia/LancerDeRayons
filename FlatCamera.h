@@ -10,7 +10,7 @@ public :
     FlatCamera(const Point& point, const Vector& direction, float angA, float angB, const Vector& vertical);
     FlatCamera(const Point& point, const Vector& direction, float angA, float angB,const Vector& vertical,const Vector& horizon);
     Rayon getRayon(float u, float v);
-    void lancerRayons (Picture p, const Scene& scene);
+    void lancerRayons (Picture& p, const Scene& scene);
 
 protected :
 

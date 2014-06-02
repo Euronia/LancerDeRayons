@@ -31,7 +31,7 @@ FlatCamera::FlatCamera(const Point& point, const Vector& direction, float angA, 
     }
 
 
-    void FlatCamera::lancerRayons (Picture p,const Scene& scene)
+    void FlatCamera::lancerRayons (Picture& p,const Scene& scene)
     {
         int picWidth = p.getWidth() ;
         int picHeight = p.getHeight();
@@ -48,8 +48,8 @@ FlatCamera::FlatCamera(const Point& point, const Vector& direction, float angA, 
               // v = v+(1.0/(picHeight/2));
               u = (2.0*j + 1) / picWidth -1 ;
               v =(2.0*i+1)/picHeight -1;
-               resultColor = scene.lanceRayon(this->getRayon(u,v));
-               //resultColor = scene.lanceRayon(Rayon(Point(0.0,0.0,0.0),Vector(1.0,0.0,0.0),Color(1.0,1.0,1.0)));
+               resultColor = scene.lanceRayon(this->getRayon(u,v),2);
+               //resultColor = scene.lanceRayon(Rayon(Point(0.0,0.0,0.0),Vector(1.0,0.0,0.0),Color(1.0,1.0,1.0)),2);
                ptrPicture[i*picWidth+j] = resultColor ;
             }
             v = -1.0 ;

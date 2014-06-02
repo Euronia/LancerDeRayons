@@ -2,6 +2,12 @@
 #define PICTURE_H
 #include "Color.h"
 
+    /*
+*   This class represent a picture
+*   It's represented by an array of Colors.
+*
+    */
+
 class Picture
 {
 public :

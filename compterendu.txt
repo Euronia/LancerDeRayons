@@ -1,0 +1,16 @@
+La classe Point : 
+ Elle représente un point dans un environnement 3D. Elle contient 3 floats qui définissent sa position.
+ Ces 3 points sont des attributs publics car leur utilisation est fréquente. 
+ Un seul constructeur qui prend en parametre 3 floats.
+ Les opérateurs -= et - entre 2 points ont été définies.
+ La méthode translate paermet de bouger un point suivant un vecteur passé en paramètre. 
+
+
+La classe Vector : 
+ Elle représente un vecteur dans un environnement 3D. Elle contient 3 floats qui définissent son "mouvement" dans l'univers 3D. 
+ Ces 3 points sont des attributs privés et on possèfe 3 fonctions ( respectivement getX(), getY() et getZ() ) qui permettent de connaitre
+ leurs valeurs. 
+ Elle possède 2 constructeurs :
+	un qui prend 3 floats en paramètres 
+	un qui prend un point ( résultat d'une soustraction entre 2 points )  en paramètres 
+ L'opérateur * avec un float a été défini.

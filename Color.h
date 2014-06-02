@@ -12,6 +12,7 @@ public :
     float r;
     float g;
     float b;
+    friend Color mult2 (const Color& c1 , const Color& c2);
 
 protected :
 

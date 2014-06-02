@@ -8,7 +8,7 @@ class Optic
 public :
     Optic();
     virtual ~Optic();
-    virtual Color getColor (float posX,float posY) const = 0;
+    virtual Color getColor (float u,float v) const = 0;
 
 protected :
 

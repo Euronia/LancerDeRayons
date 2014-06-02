@@ -8,6 +8,7 @@ class PictureTexture : public Texture
 public:
     PictureTexture(const Picture& fond, const Color &c);
     ~PictureTexture();
+    Color getColor (float u,float v) const ;
 
 protected:
 

@@ -44,6 +44,7 @@ Color Color::operator+(const Color& c)
     this->r = this->r + c.r;
     this->g = this->g + c.g;
     this->b = this->b + c.b;
+    return *this;
 }
 
 Color Color::operator*(const Color& c)
@@ -51,6 +52,7 @@ Color Color::operator*(const Color& c)
     this->r = this->r * c.r;
     this->g = this->g * c.g;
     this->b = this->b * c.b;
+    return *this;
 }
 
 Color Color::operator*(float scalar)
@@ -58,4 +60,6 @@ Color Color::operator*(float scalar)
     this->r = this->r * scalar;
     this->g = this->g * scalar;
     this->b = this->b * scalar;
+    return *this;
 }
+

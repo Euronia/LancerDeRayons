@@ -7,7 +7,7 @@ class Texture : public Optic
 {
 public :
 
- virtual Color getColor (float posX,float posY);
+ virtual Color getColor (float u,float v) const = 0;
 
 protected :
 

@@ -13,3 +13,8 @@ PictureTexture::PictureTexture(const Picture& pict, const Color& color)
 PictureTexture::~PictureTexture()
 {
 }
+
+ Color PictureTexture::getColor (float u,float v) const
+ {
+     return Color(0.0,0.0,0.0) ;
+ }

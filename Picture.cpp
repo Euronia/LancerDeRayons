@@ -36,7 +36,14 @@ void Picture::GenerateFile() const
         {
             for(int j=0; j<this->width; j++)
             {
-                myStream << round(this->pictureTab[i*this->width+j].r*255) << " " << round(this->pictureTab[i*this->width+j].g*255)<< " " << round(this->pictureTab[i*this->width+j].b*255) << " ";
+                int r , g ,b ;
+                r = round(this->pictureTab[i*this->width+j].r*255) ;
+                if (r>255) {r=255;}
+                g = round(this->pictureTab[i*this->width+j].g*255) ;
+                if (g>255) {g=255;}
+                b = round(this->pictureTab[i*this->width+j].b*255) ;
+                if (b>255) {b=255;}
+                myStream << r << " " << g << " " << b << " ";
             }
             myStream << endl;
         }
